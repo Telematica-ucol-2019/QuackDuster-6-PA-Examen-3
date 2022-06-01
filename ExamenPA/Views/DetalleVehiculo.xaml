@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenPA.Views.DetalleVehiculo"
+             x:Name="this"
+             Title="Detalles vehiculo">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#023B4F" Margin="10,10" BindingContext="{Binding Vehiculo}" HorizontalOptions="Center" >
+            <Grid RowDefinitions="auto,200,auto,auto,auto,auto,*,auto, auto" ColumnDefinitions="auto,*">
+                <Image Source="{Binding Modelo}" Grid.Row="1" Grid.ColumnSpan="2" />
+                <Label Text="Title:" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" TextColor="#3dbbdb"/>
+                <Label Text="{Binding Marca}" Grid.Row="2" Grid.Column="1" TextColor="White"/>
+                <Label Text="Synopsis:" Grid.Row="3" Grid.Column="0" FontAttributes="Bold" TextColor="#3dbbdb"/>
+                <Label Text="{Binding Año}" Grid.Row="3" Grid.Column="1" TextColor="White"/>
+                <Label Text="Producer:" Grid.Row="4" Grid.Column="0" FontAttributes="Bold" TextColor="#3dbbdb"/>
+
+
+
+
+            </Grid>
+            <!--<StackLayout>
+                <Label Text="Actors Participant" HorizontalOptions="Center" FontAttributes="Bold" TextColor=" white"/>
+                <CollectionView ItemsSource="{Binding Actors}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:Actor">
+                            <StackLayout>
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Grid.Row="0" Grid.Column="1"  Text="Actor Name: " FontAttributes="Bold" TextColor="#3dbbdb"/>
+                                            <Span Text="{Binding Name}" TextColor="White"/>
+
+                                            <Span Grid.Row="0" Grid.Column="1"  Text="&#10;Actor Alias: " FontAttributes="Bold" TextColor="#3dbbdb"/>
+                                            <Span Text="{Binding Alias}" FontAttributes="Italic" TextColor="White"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+
+                                </Label>
+                                <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" Color="#046E8F"/>
+                            </StackLayout>
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </StackLayout>-->
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
